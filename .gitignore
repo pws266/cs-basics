@@ -1,0 +1,11 @@
+# Folders with compiled files
+bin/
+obj/
+TestResults/
+
+# Visual Studio intermediate files
+*.suo
+*.rsp
+
+# Executables
+*.exe
