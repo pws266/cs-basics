@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<input xmlns:calc="http://calculator">
+  <calc:operand>10</calc:operand>
+  <calc:operation operationType="sum" />
+  <calc:operand>25</calc:operand>
+</input>

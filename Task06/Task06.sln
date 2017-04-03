@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomTimer", "CustomTimer\CustomTimer.csproj", "{471D16EF-AA0C-480C-B416-C0C33BAEEF6E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdvancedCustomTimer", "AdvancedCustomTimer\AdvancedCustomTimer.csproj", "{4E9A5FEB-3C4E-479D-A85B-C1DD9D5A8731}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{471D16EF-AA0C-480C-B416-C0C33BAEEF6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{471D16EF-AA0C-480C-B416-C0C33BAEEF6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{471D16EF-AA0C-480C-B416-C0C33BAEEF6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{471D16EF-AA0C-480C-B416-C0C33BAEEF6E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E9A5FEB-3C4E-479D-A85B-C1DD9D5A8731}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E9A5FEB-3C4E-479D-A85B-C1DD9D5A8731}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E9A5FEB-3C4E-479D-A85B-C1DD9D5A8731}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E9A5FEB-3C4E-479D-A85B-C1DD9D5A8731}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

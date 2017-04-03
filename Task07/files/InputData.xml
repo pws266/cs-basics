@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<input xmlns:calc="http://calculator">
+  <calc:operand>1</calc:operand>
+  <calc:operation operationType="sum"/>
+  <calc:operand>2</calc:operand>
+
+  <calc:operand>3</calc:operand>
+  <calc:operation operationType="sum"/>
+  <calc:operand>5</calc:operand>
+
+  <calc:operand>12</calc:operand>
+  <calc:operation operationType="min"/>
+  <calc:operand>8</calc:operand>
+
+  <calc:operand>11</calc:operand>
+  <calc:operation operationType="min"/>
+  <calc:operand>24</calc:operand>
+</input>

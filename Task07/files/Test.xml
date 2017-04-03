@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<calc:addressBook action-type="Bank-Debit" xmlns:calc="http://calculator">
+  <calc:owner firstName="Piter" lastName="Wagner">
+    <calc:phone>+7 (903) 650-3934</calc:phone>
+    <calc:email>pws266@yandex.ru</calc:email>
+  </calc:owner>
+  <calc:contact firstName="Hansi" lastName="Kursch">
+    <calc:phone>+7 (952) 541-9005</calc:phone>
+    <calc:email>pws266@gmail.com</calc:email>
+  </calc:contact>
+  <calc:contact firstName="Lemmy" lastName="Kilmister">
+    <calc:phone>+7 (920) 415-9816</calc:phone>
+    <calc:email>motorhead@metal.uk</calc:email>
+  </calc:contact>
+  <calc:contact firstName="Doro" lastName="Pesch">
+    <calc:phone>+7 (920) 410-7296</calc:phone>
+    <calc:email>svetaka@yandex.ru</calc:email>
+  </calc:contact>
+  <calc:data>11</calc:data>
+</calc:addressBook>
