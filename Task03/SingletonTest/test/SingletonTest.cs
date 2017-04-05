@@ -1,8 +1,10 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace CSharpBasics.Test
+﻿namespace CSharpBasics.test
 {
+    using System;
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+    using CSharpBasics.src;
+
     [TestClass]
     public class SingletonTest
     {
@@ -13,15 +15,15 @@ namespace CSharpBasics.Test
         [TestMethod]
         public void OneInstanceCreation()
         {
-            CSharpBasics.Singleton<int> st = CSharpBasics.Singleton<int>.Instance;
+            Singleton<Configuration> st = Singleton<Configuration>.Instance;
             Assert.IsTrue(st != null);
         }
 
         [TestMethod]
         public void TwoInstancesCheck()
         {
-            CSharpBasics.Singleton<int> st0 = CSharpBasics.Singleton<int>.Instance;
-            CSharpBasics.Singleton<int> st1 = CSharpBasics.Singleton<int>.Instance;
+            Singleton<Configuration> st0 = Singleton<Configuration>.Instance;
+            Singleton<Configuration> st1 = Singleton<Configuration>.Instance;
 
             Assert.IsTrue(st0 == st1);
         }

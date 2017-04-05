@@ -1,7 +1,7 @@
-﻿using System;
-
-namespace CSharpBasics
+﻿namespace CSharpBasics.src
 {
+    using System;
+
     // element for list from collection
     public class TestClass
     {

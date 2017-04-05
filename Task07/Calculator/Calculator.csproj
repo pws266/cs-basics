@@ -33,8 +33,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="src\Computation.cs" />
+    <Compile Include="src\ComputationChecker.cs" />
     <Compile Include="src\InputData.cs" />
+    <Compile Include="src\InputElement.cs" />
     <Compile Include="src\Interface.cs" />
+    <Compile Include="src\OperandElement.cs" />
+    <Compile Include="src\OperationElement.cs" />
+    <Compile Include="src\OperationType.cs" />
     <Compile Include="src\OutputData.cs" />
   </ItemGroup>
   <ItemGroup>

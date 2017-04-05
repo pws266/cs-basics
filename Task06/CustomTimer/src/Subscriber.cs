@@ -1,7 +1,7 @@
-﻿using System;
-
-namespace CSharpBasics
+﻿namespace CSharpBasics.src
 {
+    using System;
+
     // subscriber for custom timer usage
     public class Subscriber
     {

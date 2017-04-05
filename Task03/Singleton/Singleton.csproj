@@ -32,7 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="src\Configuration.cs" />
     <Compile Include="src\Singleton.cs" />
+    <Compile Include="src\SingletonChecker.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

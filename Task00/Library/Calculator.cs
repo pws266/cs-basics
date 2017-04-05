@@ -1,7 +1,7 @@
-﻿using System;
-
-namespace Library
+﻿namespace Library
 {
+    using System;
+
     // implementation of mathematical operations for calculator
     public class Calculator
     {

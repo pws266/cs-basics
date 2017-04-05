@@ -1,7 +1,7 @@
-﻿using System;
-
-namespace CSharpBasics
+﻿namespace CSharpBasics.src
 {
+    using System;
+
     // element for custom list
     public struct TestStruct
     {
@@ -46,32 +46,4 @@ namespace CSharpBasics
             return Message;
         }
     }
-/*
-    class TestStructVerification
-    {
-        public static void Main()
-        {
-            TestStruct a = TestStruct.Fabric(10, "Struct A");
-
-            TestStruct b = a;
-
-            if (a.Equals(b))
-            {
-                Console.WriteLine("A and B have the same number values");
-            }
-
-            b.Number = 20;
-
-            if (!a.Equals(b))
-            {
-                Console.WriteLine("A and B have different number values");
-            }
-
-            b.Message = "Struct B";
-
-            Console.WriteLine("\nMessage field of struct A: " + a.ToString());
-            Console.WriteLine("\nMessage field of struct B: " + b.ToString());
-        }
-    }
- */
 }

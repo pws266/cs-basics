@@ -1,20 +1,21 @@
-﻿using System;
-using System.Globalization;
-using System.Linq;
-using System.Text;
-
-using Library;
-
-namespace CSharpBasics
+﻿namespace CSharpBasics.src
 {
+    using System;
+    using System.Globalization;
+    using System.Linq;
+    using System.Text;
+    using Library.src;
+
     // simple calculator implementation
     public sealed class Computation
     {
+        private delegate double Action(double x, double y);
+
         private static char separator;   // separator sign in float point value representation
         // char array for possible float point separator values searching
-        private static char[] separator_signs_array = ".,".ToCharArray();
+        private static char[] separatorSignsArray = ".,".ToCharArray();
 
-        private static double abs_bound = 10;
+        private static double absBound = 10;
 
         public Computation()
         {
@@ -27,9 +28,9 @@ namespace CSharpBasics
         }
 
         // reads arguments and mathematical operation sign
-        private static T getArgument<T>(String message)
+        private static T GetArgument<T>(String message)
         {
-            Console.Write(message);
+            Console.Write(message + ": ");
 
             String data = Console.ReadLine();
             T result = default(T);
@@ -37,7 +38,7 @@ namespace CSharpBasics
             // replacing illegal separator sign in float point data representation
             if (result is double)
             {
-                int symbolPos = data.IndexOfAny(separator_signs_array);
+                int symbolPos = data.IndexOfAny(separatorSignsArray);
 
                 if (symbolPos != -1 && data.ElementAt<char>(symbolPos) != separator)
                 {
@@ -48,80 +49,62 @@ namespace CSharpBasics
                 }
             }
 
-            result = (T)Convert.ChangeType(data, typeof(T));
+            try
+            {
+                result = (T)Convert.ChangeType(data, typeof(T));
+            }
+            catch (FormatException exc)
+            {
+                Console.WriteLine("Error! Illegal format of argument \"" + message + "\"");
+                Console.WriteLine("Description: " + exc.Message);
+
+                throw new FormatException();
+            }
+            catch (OverflowException exc)
+            {
+                Console.WriteLine("Error! Argument \"" + message + "\" is out of type \"" +
+                                  result.GetType() + "\" range");
+                Console.WriteLine("Description: " + exc.Message);
+
+                throw new OverflowException();
+            }
 
             return result;
         }
 
+        // reads operands ans computes result value via specified calculator's operation
         public void Compute()
         {
+            Action mathAction;      // delagate for calculator's operation selection
+
             // getting arguments and mathematical operations sign
-            double x = Computation.getArgument<double>("First argument: ");
-            if (Math.Abs(x) > abs_bound)
-                throw new OutOfModuloException(String.Format("Error: First argument is greater than modulo {0}", abs_bound));
+            double x = Computation.GetArgument<double>("First argument");
+            if (Math.Abs(x) > absBound)
+                throw new OutOfModuloException(String.Format("Error: First argument is greater than modulo {0}", absBound));
 
-            char sign = Computation.getArgument<char>("Operation: ");
+            char sign = Computation.GetArgument<char>("Operation");
 
-            double y = Computation.getArgument<double>("Second argument: ");
-            if (Math.Abs(y) > abs_bound)
-                throw new OutOfModuloException(String.Format("Error: Second argument is greater than modulo {0}", abs_bound));
-
-
-            string answer = string.Format(" > {0} {1} {2} = ", x, sign, y);
-            double result = 0;
-
-            // performing computation
-            switch(sign)
+            switch (sign)
             {
                 case '+':
-                    result = Calculator.add(x, y);
-                    answer += Convert.ToString(result);
+                    mathAction = Calculator.add;
                     break;
+
                 case '-':
-                    result = Calculator.sub(x, y);
-                    answer += Convert.ToString(result);
+                    mathAction = Calculator.sub;
                     break;
+
                 default:
-                    answer = "Unknown operation. No result";
-                    break;
-            }
+                    Console.WriteLine("\n>> Unknown operation. No computation will be perform! <<");
+                    return;
+            }    
 
-            Console.WriteLine(answer);
+            double y = Computation.GetArgument<double>("Second argument");
+            if (Math.Abs(y) > absBound)
+                throw new OutOfModuloException(String.Format("Error: Second argument is greater than modulo {0}", absBound));
+
+            double result = mathAction(x, y);
+            Console.WriteLine(" > {0} {1} {2} = {3}", x, sign, y, result);
         }
-    }
-
-    // caclulator verification
-    class VerifyComputation
-    {
-        public static void Main(string[] args)
-        {
-            // creating calculator instance
-            Computation calc = new Computation();
-
-            bool is_continue = true;    // flag for computations to be continued
-
-            while (is_continue)
-            {
-                try
-                {
-                    calc.Compute();
-                }
-                catch (OutOfModuloException exc)
-                {
-                    Console.WriteLine(exc);
-                }
-                finally
-                {
-                    Console.WriteLine("\nContinue? (y/n)");
-
-                    is_continue = char.ToLower(
-                        (char)Convert.ChangeType(Console.ReadLine(),
-                                                 typeof(char))) == 'y';
-
-                    Console.WriteLine((is_continue ? "\nOk!\n------" : "Bye!"));
-                }
-            }
-        }
-
     }
 }

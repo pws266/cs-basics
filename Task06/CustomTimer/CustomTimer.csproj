@@ -34,6 +34,7 @@
   <ItemGroup>
     <Compile Include="src\Subscriber.cs" />
     <Compile Include="src\Timer.cs" />
+    <Compile Include="src\TimerChecker.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

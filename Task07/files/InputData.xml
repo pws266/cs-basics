@@ -5,14 +5,26 @@
   <calc:operand>2</calc:operand>
 
   <calc:operand>3</calc:operand>
-  <calc:operation operationType="sum"/>
+  <calc:operation operationType="max"/>
   <calc:operand>5</calc:operand>
 
   <calc:operand>12</calc:operand>
   <calc:operation operationType="min"/>
   <calc:operand>8</calc:operand>
 
+  <calc:operand>15</calc:operand>
+  <calc:operation operationType="sum"/>
+  <calc:operand>8px</calc:operand>
+
   <calc:operand>11</calc:operand>
   <calc:operation operationType="min"/>
   <calc:operand>24</calc:operand>
+
+  <calc:operand>days->40</calc:operand>
+  <calc:operation operationType="min"/>
+  <calc:operand>7</calc:operand>
+
+  <calc:operand>18</calc:operand>
+  <calc:operation operationType="sum"/>
+  <calc:operand>1</calc:operand>
 </input>

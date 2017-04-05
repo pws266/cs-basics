@@ -1,9 +1,9 @@
-﻿using System;
-
-namespace CSharpBasics
+﻿namespace CSharpBasics.src
 {
+    using System;
+
     // auxiliary class for console coloring
-    class Interface
+    public class Interface
     {
         // prints colored message on specified background
         public static void DisplayMessage(string message, ConsoleColor foregroundColor,

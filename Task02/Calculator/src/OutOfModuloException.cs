@@ -1,9 +1,9 @@
-﻿using System;
-
-namespace CSharpBasics
+﻿namespace CSharpBasics.src
 {
+    using System;
+
     // custom exception for tracing arguments
-    class OutOfModuloException : Exception
+    public class OutOfModuloException : Exception
     {
         // set of constructors
         public OutOfModuloException() : base() { }

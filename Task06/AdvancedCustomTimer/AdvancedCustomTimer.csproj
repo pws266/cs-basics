@@ -31,10 +31,14 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <ItemGroup />
   <ItemGroup>
     <Compile Include="src\AdvancedSubscriber.cs" />
     <Compile Include="src\AdvancedTimer.cs" />
+    <Compile Include="src\AdvancedTimerChecker.cs" />
+    <Compile Include="src\TimerEventArgs.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

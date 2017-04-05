@@ -1,7 +1,7 @@
-﻿using System;
-
-namespace CSharpBasics
+﻿namespace CSharpBasics.src
 {
+    using System;
+
     // advanced subscriber with different timer event handlers
     public class AdvancedSubscriber
     {
@@ -40,8 +40,8 @@ namespace CSharpBasics
         {
             string message = String.Format("{0} > \"OnTickHandler\": timer #{1} with interval {2}s " +
                                            "is expired for subscriber #{3}",
-                                           DateTime.Now.ToString("HH:mm:ss"), arg.Id, 
-                                           arg.Interval, this.id);
+                                           DateTime.Now.ToString("HH:mm:ss"), arg.id, 
+                                           arg.interval, this.id);
             DisplayColoredMessage(message);
         }
 
@@ -50,8 +50,8 @@ namespace CSharpBasics
         {
             string message = String.Format("{0} > \"OnTockHandler\": timer #{1} with name \"{2}\" " +
                                            "interval {3}s is expired for subscriber #{4}",
-                                           DateTime.Now.ToString("HH:mm:ss"), arg.Id, arg.Name,
-                                           arg.Interval, this.id);
+                                           DateTime.Now.ToString("HH:mm:ss"), arg.id, arg.name,
+                                           arg.interval, this.id);
             DisplayColoredMessage(message);
         }
     }

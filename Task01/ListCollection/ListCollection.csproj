@@ -33,6 +33,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="src\CompareTest.cs" />
+    <Compile Include="src\CompareTestChecker.cs" />
     <Compile Include="src\TestClass.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -1,11 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Text;
-using System.Xml.Serialization;
-
-namespace CSharpBasics
+﻿namespace CSharpBasics.src
 {
+    using System;
+    using System.Collections.Generic;
+    using System.IO;
+    using System.Text;
+    using System.Xml.Serialization;
+
     // Serializer for computation result saving
     [XmlRoot("results")]
     public class OutputData

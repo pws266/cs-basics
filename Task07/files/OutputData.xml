@@ -1,7 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <results>
   <output>3</output>
-  <output>8</output>
+  <output>error</output>
   <output>4</output>
+  <output>error</output>
   <output>-13</output>
+  <output>error</output>
+  <output>19</output>
 </results>

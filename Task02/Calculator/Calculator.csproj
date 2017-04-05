@@ -32,6 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="src\ComputationChecker.cs" />
     <Compile Include="src\OutOfModuloException.cs" />
     <Compile Include="src\Computation.cs" />
   </ItemGroup>
